@@ -1,0 +1,21 @@
+.iconButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    padding: 14px 28px;
+    border-radius: 12px;
+    
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+
+}
