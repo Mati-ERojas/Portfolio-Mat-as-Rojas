@@ -6,10 +6,13 @@
 }
 
 body {
-    overflow-y: overlay;
+    overflow-y: scroll;
 }
 
 :root {
-    --background-color: #2c055c;
+    --background-initial-color: #20004A;
+    --background-intermediate-color: #3F0087;
+    --background-final-color: #6714C7;
     --background-gradient: linear-gradient(180deg, rgba(32, 0, 74, 1) 0%, rgba(63, 0, 135, 1) 50%, rgba(103, 20, 199, 1) 100%);
+    --background-inverted-gradient: linear-gradient(0deg, rgba(32, 0, 74, 1) 0%, rgba(63, 0, 135, 1) 50%, rgba(103, 20, 199, 1) 100%);
 }

@@ -6,11 +6,15 @@ interface IIconButtonProps {
   onClick?: () => void;
   fontSize: string;
   iconFontSize: string;
+  href?: string;
+  dowload?: boolean;
 }
 
 export const IconButton = (props: IIconButtonProps) => {
   return (
-    <button
+    <a
+        href={props.href}
+        download={props.dowload}
         className={styles.iconButton}
         onClick={props.onClick}
         style={{
@@ -19,6 +23,6 @@ export const IconButton = (props: IIconButtonProps) => {
     >
       {props.icon && <span className="material-symbols-outlined" style={{fontSize: props.iconFontSize}}>{props.icon}</span>}
       {props.text}
-    </button>
+    </a>
   )
 }
