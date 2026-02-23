@@ -2,6 +2,9 @@ import { useState } from "react";
 import { IconButton } from "../../UI/IconButton/IconButton";
 import styles from "./Home.module.css";
 import { ContactModal } from "../../UI/ContactModal/ContactModal";
+import { StackSection } from "../../UI/StackSection/StackSection";
+import { AboutSkillsSection } from "../../UI/AboutSkillsSection/AboutSkillsSection";
+import { ProyectsSection } from "../../UI/ProyectsSection/ProyectsSection";
 
 export const Home = () => {
     const [openContactModal, setOpenContactModal] = useState(false);
@@ -61,14 +64,17 @@ export const Home = () => {
                     />
                 </div>
             </div>
+            <StackSection />
+            <ProyectsSection />
+            <AboutSkillsSection />
+            {openContactModal && (
+                <ContactModal setOpenContactModal={setOpenContactModal} />
+            )}
             <div className={`${styles.footer} fadeIn`}>
                 <p>
                     © 2026 Matías Emanuel Rojas. Desarrollado con React + Vite
                 </p>
             </div>
-            {openContactModal && (
-                <ContactModal setOpenContactModal={setOpenContactModal} />
-            )}
         </div>
     );
 };
