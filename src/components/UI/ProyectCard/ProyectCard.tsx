@@ -6,6 +6,7 @@ interface ProyectCardProps {
     techStack: string;
     description: string;
     imageUrl: string;
+    onClick?: () => void;
 }
 
 export const ProyectCard = (props: ProyectCardProps) => {
@@ -24,9 +25,15 @@ export const ProyectCard = (props: ProyectCardProps) => {
                 <h4 className={styles.title}>{props.title}</h4>
                 <p className={styles.techStack}>{props.techStack}</p>
                 <p className={styles.description}>{props.description}</p>
-                <button className={styles.viewProjectButton}>
+                <motion.button
+                    className={styles.viewProjectButton}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    onClick={props.onClick}
+                >
                     Ver proyecto
-                </button>
+                </motion.button>
             </div>
         </motion.div>
     );

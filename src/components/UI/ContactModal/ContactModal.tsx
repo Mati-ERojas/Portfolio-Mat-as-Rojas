@@ -59,7 +59,7 @@ export const ContactModal = ({ setOpenContactModal }: IContactModalProps) => {
                 onClick={() => handleClose()}
             />
             <div
-                className={`${styles.modalContainer} ${isClosing ? "slideDown" : "slideUp"}`}
+                className={`${styles.modalContainer} ${isClosing ? "exitSlideDown" : "slideUp"}`}
             >
                 <a
                     href="https://github.com/Mati-ERojas"

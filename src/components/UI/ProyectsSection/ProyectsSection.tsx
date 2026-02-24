@@ -1,3 +1,4 @@
+import { navigateTo } from "../../../routes/navigation";
 import { ProyectCard } from "../ProyectCard/ProyectCard";
 import styles from "./ProyectsSection.module.css";
 import { motion } from "framer-motion";
@@ -18,9 +19,10 @@ export const ProyectsSection = () => {
                     title={"Proyecto - EcoLimpio"}
                     techStack={"React · Spring Boot · MySQL"}
                     description={
-                        "Sistema E-commerce para supermercado familiar, con autenticación JWT, panel de administración y carrito de compras."
+                        "Sistema E-commerce para supermercado familiar con checkout externalizado, autenticación JWT, panel de administración y carrito de compras."
                     }
                     imageUrl={"ecolimpio/ecolimpio_preview.webp"}
+                    onClick={() => navigateTo("/ecolimpio")}
                 />
             </div>
         </div>

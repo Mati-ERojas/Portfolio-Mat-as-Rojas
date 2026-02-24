@@ -9,6 +9,13 @@ import { ProyectsSection } from "../../UI/ProyectsSection/ProyectsSection";
 export const Home = () => {
     const [openContactModal, setOpenContactModal] = useState(false);
 
+    const handleScrollToProyects = () => {
+        const proyectsSection = document.getElementById("proyects");
+        if (proyectsSection) {
+            proyectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div className={styles.background}>
             <div className={`${styles.heroSection} fadeUp`}>
@@ -44,6 +51,7 @@ export const Home = () => {
                         text="Ver Proyectos"
                         fontSize="1rem"
                         iconFontSize="2rem"
+                        onClick={() => handleScrollToProyects()}
                     />
                     <IconButton
                         icon="mail"
@@ -65,7 +73,9 @@ export const Home = () => {
                 </div>
             </div>
             <StackSection />
-            <ProyectsSection />
+            <section id="proyects">
+                <ProyectsSection />
+            </section>
             <AboutSkillsSection />
             {openContactModal && (
                 <ContactModal setOpenContactModal={setOpenContactModal} />
