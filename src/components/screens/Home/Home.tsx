@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { IconButton } from "../../UI/IconButton/IconButton";
 import styles from "./Home.module.css";
-import { ContactModal } from "../../UI/ContactModal/ContactModal";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { StackSection } from "../../UI/StackSection/StackSection";
 import { AboutSkillsSection } from "../../UI/AboutSkillsSection/AboutSkillsSection";
 import { ProyectsSection } from "../../UI/ProyectsSection/ProyectsSection";
+import { GenericModal } from "../../UI/GenericModal/GenericModal";
 
 export const Home = () => {
     const [openContactModal, setOpenContactModal] = useState(false);
@@ -33,10 +35,7 @@ export const Home = () => {
                             <p>
                                 <b>Desarrollador web FullStack</b>
                             </p>
-                            <p>
-                                React · Spring Boot · Node.js · MySQL · Entre
-                                otros
-                            </p>
+                            <p>React · Spring Boot · Node.js · MySQL</p>
                             <p>
                                 Desarrollo aplicaciones web completas con
                                 arquitectura en capas, autenticación JWT y bases
@@ -78,7 +77,43 @@ export const Home = () => {
             </section>
             <AboutSkillsSection />
             {openContactModal && (
-                <ContactModal setOpenContactModal={setOpenContactModal} />
+                <GenericModal
+                    setOpenGenericModal={setOpenContactModal}
+                    content={
+                        <div className={styles.contactModalContent}>
+                            <a
+                                href="https://github.com/Mati-ERojas"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${styles.socialIcon} ${styles.github}`}
+                            >
+                                <FaGithub />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/mat%C3%ADas-rojas-021b09254/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${styles.socialIcon} ${styles.linkedin}`}
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+                                href="https://wa.me/5492616452668"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${styles.socialIcon} ${styles.whatsapp}`}
+                            >
+                                <FaWhatsapp />
+                            </a>
+                            <a
+                                href="mailto:matiasemanuelrojas0112@gmail.com"
+                                className={`${styles.socialIcon} ${styles.email}`}
+                            >
+                                <MdEmail />
+                            </a>
+                        </div>
+                    }
+                />
             )}
             <div className={`${styles.footer} fadeIn`}>
                 <p>

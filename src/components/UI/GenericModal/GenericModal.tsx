@@ -1,25 +1,27 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import styles from "./ContactModal.module.css";
+import styles from "./GenericModal.module.css";
 
 interface IContactModalProps {
-    setOpenContactModal: Dispatch<SetStateAction<boolean>>;
+    setOpenGenericModal: Dispatch<SetStateAction<boolean>>;
+    content: React.ReactNode;
 }
 
-export const ContactModal = ({ setOpenContactModal }: IContactModalProps) => {
+export const GenericModal = ({
+    setOpenGenericModal,
+    content,
+}: IContactModalProps) => {
     // Close modal on ESC key press
     useEffect(() => {
         const handleEsc = (event: KeyboardEvent) => {
             if (event.key === "Escape") {
-                setOpenContactModal(false);
+                handleClose();
             }
         };
         window.addEventListener("keydown", handleEsc);
         return () => {
             window.removeEventListener("keydown", handleEsc);
         };
-    }, [setOpenContactModal]);
+    }, [setOpenGenericModal]);
 
     // Prevent background scrolling when modal is open
     useEffect(() => {
@@ -48,7 +50,7 @@ export const ContactModal = ({ setOpenContactModal }: IContactModalProps) => {
     const handleClose = () => {
         setIsClosing(true);
         setTimeout(() => {
-            setOpenContactModal(false);
+            setOpenGenericModal(false);
         }, 300);
     };
 
@@ -56,41 +58,12 @@ export const ContactModal = ({ setOpenContactModal }: IContactModalProps) => {
         <div className={styles.wrapper}>
             <div
                 className={`${styles.backgroundBlur} ${isClosing ? "fadeOut" : "fadeIn"}`}
-                onClick={() => handleClose()}
             />
             <div
+                onClick={() => handleClose()}
                 className={`${styles.modalContainer} ${isClosing ? "exitSlideDown" : "slideUp"}`}
             >
-                <a
-                    href="https://github.com/Mati-ERojas"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.socialIcon} ${styles.github}`}
-                >
-                    <FaGithub />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/mat%C3%ADas-rojas-021b09254/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.socialIcon} ${styles.linkedin}`}
-                >
-                    <FaLinkedin />
-                </a>
-                <a
-                    href="https://wa.me/5492616452668"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.socialIcon} ${styles.whatsapp}`}
-                >
-                    <FaWhatsapp />
-                </a>
-                <a
-                    href="mailto:matiasemanuelrojas0112@gmail.com"
-                    className={`${styles.socialIcon} ${styles.email}`}
-                >
-                    <MdEmail />
-                </a>
+                {content}
             </div>
         </div>
     );

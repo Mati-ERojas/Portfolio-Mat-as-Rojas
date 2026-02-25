@@ -26,7 +26,7 @@ export const StackSection = () => {
                         stiffness: 200,
                     }}
                     viewport={{ once: true }}
-                    className={styles.stackItem}
+                    className={`${styles.stackItem} defaultCard`}
                 >
                     <h4>Frontend</h4>
                     <p>· HTML5</p>
@@ -48,7 +48,7 @@ export const StackSection = () => {
                         stiffness: 200,
                     }}
                     viewport={{ once: true }}
-                    className={styles.stackItem}
+                    className={`${styles.stackItem} defaultCard`}
                 >
                     <h4>Backend / ORMs</h4>
                     <p>· NodeJS</p>
@@ -70,7 +70,7 @@ export const StackSection = () => {
                         stiffness: 200,
                     }}
                     viewport={{ once: true }}
-                    className={styles.stackItem}
+                    className={`${styles.stackItem} defaultCard`}
                 >
                     <h4>Base de Datos</h4>
                     <p>· MySQL</p>
@@ -90,7 +90,7 @@ export const StackSection = () => {
                         stiffness: 200,
                     }}
                     viewport={{ once: true }}
-                    className={styles.stackItem}
+                    className={`${styles.stackItem} defaultCard`}
                 >
                     <h4>Herramientas</h4>
                     <p>· Git / Github</p>

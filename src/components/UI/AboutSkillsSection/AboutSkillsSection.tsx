@@ -14,6 +14,7 @@ export const AboutSkillsSection = () => {
                     Sobre mí
                 </motion.h3>
                 <motion.p
+                    className="defaultCard"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     whileHover={{
@@ -28,10 +29,10 @@ export const AboutSkillsSection = () => {
                     viewport={{ once: true }}
                 >
                     Desarrollador Fullstack enfocado en aplicaciones web
-                    modernas. Trabajo con React, Spring Boot y bases de datos
-                    SQL/NoSQL. Me especializo en código limpio, estructurado y
-                    escalable. Disfruto diseñar interfaces claras y APIs bien
-                    organizadas.
+                    modernas. Trabajo con React, Spring Boot, NodeJS y bases de
+                    datos SQL/NoSQL. Me especializo en código limpio,
+                    estructurado y escalable. Disfruto diseñar interfaces claras
+                    y APIs bien organizadas.
                 </motion.p>
             </div>
             <div className={styles.skillsSection}>
@@ -44,6 +45,7 @@ export const AboutSkillsSection = () => {
                     Habilidades técnicas
                 </motion.h3>
                 <motion.ul
+                    className="defaultCard"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     whileHover={{
