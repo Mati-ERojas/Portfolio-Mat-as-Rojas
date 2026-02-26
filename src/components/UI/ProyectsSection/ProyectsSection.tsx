@@ -22,7 +22,14 @@ export const ProyectsSection = () => {
                         "Sistema E-commerce para supermercado familiar con checkout externalizado, autenticación JWT, panel de administración y carrito de compras."
                     }
                     imageUrl={"ecolimpio/ecolimpio_preview.webp"}
-                    onClick={() => navigateTo("/ecolimpio")}
+                    onClick={() => {
+                        window.scrollTo({
+                            top: 0,
+                            left: 0,
+                            behavior: "instant",
+                        });
+                        navigateTo("/ecolimpio");
+                    }}
                 />
             </div>
         </div>

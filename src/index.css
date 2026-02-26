@@ -56,3 +56,14 @@ body {
 
     border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+.swiper-pagination-bullet {
+    background-color: var(--background-final-color) !important;
+    opacity: 0.5 !important;
+    scale: 1.2 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--background-final-color) !important;
+    opacity: 1 !important;
+}

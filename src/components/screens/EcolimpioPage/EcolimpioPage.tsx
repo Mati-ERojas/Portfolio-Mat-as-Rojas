@@ -3,6 +3,8 @@ import styles from "./EcolimpioPage.module.css";
 import { AboutProyect } from "../../UI/Ecolimpio/AboutProyect/AboutProyect";
 import { ProyectHero } from "../../UI/Ecolimpio/ProyectHero/ProyectHero";
 import { ProyectArchitecture } from "../../UI/Ecolimpio/ProyectArchitecture/ProyectArchitecture";
+import { ClientModule } from "../../UI/Ecolimpio/ClientModule/ClientModule";
+import { Footer } from "../../UI/Footer/Footer";
 
 export const EcolimpioPage = () => {
     return (
@@ -17,6 +19,8 @@ export const EcolimpioPage = () => {
             <ProyectHero />
             <AboutProyect />
             <ProyectArchitecture />
+            <ClientModule />
+            <Footer />
         </div>
     );
 };

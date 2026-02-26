@@ -7,6 +7,7 @@ import { StackSection } from "../../UI/StackSection/StackSection";
 import { AboutSkillsSection } from "../../UI/AboutSkillsSection/AboutSkillsSection";
 import { ProyectsSection } from "../../UI/ProyectsSection/ProyectsSection";
 import { GenericModal } from "../../UI/GenericModal/GenericModal";
+import { Footer } from "../../UI/Footer/Footer";
 
 export const Home = () => {
     const [openContactModal, setOpenContactModal] = useState(false);
@@ -76,6 +77,7 @@ export const Home = () => {
                 <ProyectsSection />
             </section>
             <AboutSkillsSection />
+            <Footer />
             {openContactModal && (
                 <GenericModal
                     setOpenGenericModal={setOpenContactModal}
@@ -115,11 +117,6 @@ export const Home = () => {
                     }
                 />
             )}
-            <div className={`${styles.footer} fadeIn`}>
-                <p>
-                    © 2026 Matías Emanuel Rojas. Desarrollado con React + Vite
-                </p>
-            </div>
         </div>
     );
 };
