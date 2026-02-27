@@ -48,7 +48,7 @@ export const EcolimpioPage = () => {
                         <IconButton
                             icon="open_in_new"
                             text="Mockup (Figma)"
-                            fontSize="1.5rem"
+                            fontSize="1.2rem"
                             iconFontSize="2rem"
                             onClick={() => {
                                 setOpenMockup(true);
