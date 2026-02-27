@@ -1,4 +1,4 @@
-import styles from "./ClientModule.module.css";
+import styles from "./AdminModule.module.css";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -6,78 +6,88 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
-export const ClientModule = () => {
-    const clientModuleScreenshots = [
+export const AdminModule = () => {
+    const adminModuleScreenshots = [
         {
-            src: "/ecolimpio/ecolimpio_landing.webp",
-            alt: "Client Module Screenshot 1",
+            src: "/ecolimpio/ecolimpio_admin_menu.webp",
+            alt: "Admin Module Screenshot 1",
         },
         {
-            src: "/ecolimpio/ecolimpio_modal_item.webp",
-            alt: "Client Module Screenshot 2",
+            src: "/ecolimpio/ecolimpio_product-management.webp",
+            alt: "Admin Module Screenshot 2",
         },
         {
-            src: "/ecolimpio/ecolimpio_cart.webp",
-            alt: "Client Module Screenshot 3",
+            src: "/ecolimpio/ecolimpio_categories_modal.webp",
+            alt: "Admin Module Screenshot 3",
         },
         {
-            src: "/ecolimpio/ecolimpio_browse.webp",
-            alt: "Client Module Screenshot 4",
+            src: "/ecolimpio/ecolimpio_create-product.webp",
+            alt: "Admin Module Screenshot 4",
         },
         {
-            src: "/ecolimpio/ecolimpio_browse_categories.webp",
-            alt: "Client Module Screenshot 5",
+            src: "/ecolimpio/ecolimpio_pos.webp",
+            alt: "Admin Module Screenshot 5",
         },
         {
-            src: "/ecolimpio/ecolimpio_item_page.webp",
-            alt: "Client Module Screenshot 6",
-        },
-    ];
-
-    const clientFunctionalities = [
-        {
-            text: "Visualización de productos",
+            src: "/ecolimpio/ecolimpio_cash-closing.webp",
+            alt: "Admin Module Screenshot 6",
         },
         {
-            text: "Filtro automático por stock disponible",
+            src: "/ecolimpio/ecolimpio_cash-closing-history.webp",
+            alt: "Admin Module Screenshot 7",
         },
         {
-            text: "Búsqueda de productos",
+            src: "/ecolimpio/ecolimpio_movements-history.webp",
+            alt: "Admin Module Screenshot 8",
         },
         {
-            text: "Categorías de productos",
-        },
-        {
-            text: "Carrito de compras",
-        },
-        {
-            text: "Control de cantidades (no permite superar el stock real)",
-        },
-        {
-            text: "Cálculo automático de totales (subtotal, total)",
-        },
-        {
-            text: "Generación automática de mensaje estructurado para envió vía WhatsApp",
+            src: "/ecolimpio/ecolimpio_user-management.webp",
+            alt: "Admin Module Screenshot 9",
         },
     ];
-
+    const adminFunctionalities = [
+        {
+            text: "Gestión completa de productos (CRUD)",
+        },
+        {
+            text: "Gestión de categorías",
+        },
+        {
+            text: "Control de inventario y stock",
+        },
+        {
+            text: "Definición y administración de ofertas",
+        },
+        {
+            text: "Módulo de punto de venta (POS) para ventas presenciales y registro de ventas virutales",
+        },
+        {
+            text: "Módulo de cierre de caja con historial de cierres",
+        },
+        {
+            text: "Historial de movimientos y ventas",
+        },
+        {
+            text: "Gestión de usuarios y roles administrativos",
+        },
+    ];
     return (
-        <div className={styles.clientModuleSection}>
+        <div className={styles.adminModuleSection}>
             <motion.h3
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                Módulo Cliente (Interfaz Pública)
+                Módulo Administrativo (Backoffice)
             </motion.h3>
-            <div className={styles.clientModuleContent}>
+            <div className={styles.adminModuleContent}>
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2 }}
                     viewport={{ once: true }}
-                    className={`${styles.clientModuleCarouselContainer} defaultCard`}
+                    className={`${styles.adminModuleCarouselContainer} defaultCard`}
                 >
                     <Swiper
                         modules={[Autoplay, Pagination]}
@@ -95,18 +105,18 @@ export const ClientModule = () => {
                         slidesPerView={1}
                         className={styles.swiperContainer}
                     >
-                        {clientModuleScreenshots.map((screenshot, index) => (
+                        {adminModuleScreenshots.map((screenshot, index) => (
                             <SwiperSlide key={index}>
                                 <img
                                     src={screenshot.src}
                                     alt={screenshot.alt}
-                                    className={styles.clientModuleScreenshot}
+                                    className={styles.adminModuleScreenshot}
                                 />
                             </SwiperSlide>
                         ))}
                     </Swiper>
                 </motion.div>
-                <div className={styles.clientModuleFunctionalites}>
+                <div className={styles.adminModuleFunctionalites}>
                     <motion.h4
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +132,7 @@ export const ClientModule = () => {
                         viewport={{ once: true }}
                         className={styles.functionalitiesGrid}
                     >
-                        {clientFunctionalities.map((func, index) => (
+                        {adminFunctionalities.map((func, index) => (
                             <p key={index} className="defaultCard">
                                 {func.text}
                             </p>

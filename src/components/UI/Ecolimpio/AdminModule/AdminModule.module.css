@@ -1,0 +1,69 @@
+.adminModuleSection {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    user-select: none;
+}
+.adminModuleSection h3 {
+    font-size: 2rem;
+}
+
+.adminModuleContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.adminModuleCarouselContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiperContainer {
+    width: 100%;
+}
+
+.swiperContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.adminModuleFunctionalites {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.functionalitiesGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    top: 50px;
+}
+
+.functionalitiesGrid p {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.functionalitiesGrid p:hover {
+    scale: 1.01;
+    transform: translateY(-5px);
+}
