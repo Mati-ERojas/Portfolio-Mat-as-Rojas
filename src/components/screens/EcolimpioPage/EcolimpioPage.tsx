@@ -65,7 +65,7 @@ export const EcolimpioPage = () => {
                         <IconButton
                             icon="description"
                             text="Informe (PDF)"
-                            fontSize="1.5rem"
+                            fontSize="1.2rem"
                             iconFontSize="2rem"
                             onClick={() =>
                                 window.open(
