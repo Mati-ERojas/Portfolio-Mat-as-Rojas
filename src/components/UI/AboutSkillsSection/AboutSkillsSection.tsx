@@ -31,8 +31,8 @@ export const AboutSkillsSection = () => {
                     Desarrollador Fullstack enfocado en aplicaciones web
                     modernas. Trabajo con React, Spring Boot, NodeJS y bases de
                     datos SQL/NoSQL. Me especializo en código limpio,
-                    estructurado y escalable. Disfruto diseñar interfaces claras
-                    y APIs bien organizadas.
+                    estructurado y escalable. Diseño interfaces claras y APIs
+                    bien organizadas.
                 </motion.p>
             </div>
             <div className={styles.skillsSection}>

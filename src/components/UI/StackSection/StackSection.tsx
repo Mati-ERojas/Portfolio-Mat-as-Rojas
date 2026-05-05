@@ -56,6 +56,7 @@ export const StackSection = () => {
                     <p>· Express</p>
                     <p>· Hibernate / JPA</p>
                     <p>· Prisma</p>
+                    <p>· Python - FastAPI</p>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -96,6 +97,8 @@ export const StackSection = () => {
                     <p>· Git / Github</p>
                     <p>· Figma</p>
                     <p>· Postman</p>
+                    <p>· Docker</p>
+                    <p>· Agentes IA</p>
                 </motion.div>
             </div>
         </div>
